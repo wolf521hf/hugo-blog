@@ -81,17 +81,17 @@ enabled = false
 
 # Navigation
 [[menu.main]]
-name = "Home"
+name = "主页"
 url = "/"
 weight = 1
 
 [[menu.main]]
-name = "All Posts"
+name = "历程"
 url = "/post"
 weight = 2
 
 [[menu.main]]
-name = "About"
+name = "技术"
 url = "/categories"
 weight = 3
 
