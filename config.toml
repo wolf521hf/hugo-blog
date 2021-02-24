@@ -1,13 +1,13 @@
-baseURL = "https://github.com/wolf521hf/hugo-blog.git"
+baseURL = "http://example.org/"
 languageCode = "en-us"
 defaultContentLanguage = "en"
-author = "LiuPengFei"
+author = "Hugo Authors"
 title = "宇宙中一粒尘埃"
 theme = "hugo-vitae"
 paginate = 5
 enableRobotsTXT = true
 
-copyright = "© Copyright notice | [宇宙中一粒尘埃]"
+copyright = "© Copyright notice | [Vitae](https://github.com/dataCobra/hugo-vitae) theme for [Hugo](https://gohugo.io)"
 
 pygmentsstyle = "colorful"
 pygmentscodefences = true
@@ -106,3 +106,7 @@ url = "https://github.com/dataCobra/hugo-vitae"
 #icon = "fas fa-envelope"
 #cmd = "mailto:example@example.com"
 
+[[params.social]]
+name = "RSS"
+icon = "fas fa-rss"
+url = "/index.xml"
