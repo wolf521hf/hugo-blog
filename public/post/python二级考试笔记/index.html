@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	
+	<meta name="generator" content="Hugo 0.81.0" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+	<meta property="og:title" content="Python二级考试笔记">
+	
+	
+	<meta name="keywords" content="hugo,vitae,theme,static"><meta name="description" content="Python学习笔记 公共基础 1、线性表快速排序，最坏情况下需要比较的次数为n(n-1)/2
+2、而实现递归调用中的存储分配通常用：栈来表示
+3、软件工程三要素：方法、工具和过程
+4、数据处理的最小单位是：数据项
+5、不能作为结构化方法软件需求分析工具的是：数据流图；能作为工具 …"><meta property="og:title" content="Python二级考试笔记" />
+<meta property="og:description" content="Python学习笔记 公共基础 1、线性表快速排序，最坏情况下需要比较的次数为n(n-1)/2
+2、而实现递归调用中的存储分配通常用：栈来表示
+3、软件工程三要素：方法、工具和过程
+4、数据处理的最小单位是：数据项
+5、不能作为结构化方法软件需求分析工具的是：数据流图；能作为工具的是：数据字典、系统结构图、判定表
+6、Unicode编码：A-Z 65-90，a-z 97-122
+7、知识点：软件测试的策略。 集成测试是测试和组装软件的过程。它是把模块在按照设计要求组装起来的同时进行测试，主要目的是发现与接口有关的错误。集成测试的依据是概要设计说明书。
+8、知识点：数据库的内部结构体系。 数据库系统内部采用三级模式和模式间的二级映射，是为了提高数据库的数据独立性，即物理独立性与逻辑独立性。
+9、知识点：数据库系统的内部结构体系。 数据库的三级模式结构包括：概念模式、内模式、外模式。概念模式，是数据库系统中全局数据逻辑结构的描述，是全体用户公共数据视图；外模式也称为子模式或用户模式。它是用户的数据视图，也就是用户所见到的数据模式，它由概念模式推导而出；内模式又称物理模式，它给出了数据库物理存储结构与物理存取方法。
+10、知识点：范式。 对于关系模式，若其中的每个属性都已不能再分为简单项，则它属于第一范式模式（1NF）。 如果某个关系模式 R 为第一范式，并且 R 中每一个非主属性完全函数依赖于 R 的某个候选键，则称其为第二范式模式（2NF）。 如果关系模式 R 是第二范式，并且每个非主属性都不传递依赖于R的候选键，则称 R 为第三范式模式（3NF）。 比 3NF 更高级的范式是 BCNF，它要求所有属性都不传递依赖于关系的任何候选键。 由题意可知，C#-&gt;Cn，C#-&gt;Cr，C#-&gt; prC1#，C#-&gt; prC2#，符合 BCNF 的定义。
+(1)问题：定义学生选修课程的关系模式如下： SC(S#,Sn,C#,Cn,G,Cr)（其属性分别为学号、姓名、课程号、课程名、成绩、学分） 则关系最高是（）
+每个属性都已不能再分为简单项，则它属于第一范式模式。 第二范式首先是第一范式，另外包含两部分内容，一是表必须有一个主键；二是没有包含在主键中的属性必须完全依赖于主键，而不能只依赖于主键的一部分。 第三范式首先是第二范式，另外非主键属性必须直接依赖于主键，不能存在传递依赖。 主键是表中的一个或多个字段，它的值用于唯一地标识表中的某一条记录。一个学员不可能只选修一门课程，需要学号和课程号两个属性才能唯一标识一条记录，所以主键是（S#,C#）,显然成绩完全依赖于（S#,C#）,而姓名只依赖于S#，不满足第二范式，最高范式只能是第一范式。
+(2)问题：定义学生选修课程的关系模式如下： SC(S#,Sn,C#,Cn,T#,G,Cr)（其属性分别为学号、姓名、课程号、课程名、授课老师号、成绩、学分） 并且一门课程可由多个教师教授，则该关系的键是______。
+本题考查知识点是关系模式。 主键是表中的一个或多个字段，它的值用于唯一地标识表中的某一条记录。一个学员不可能只选修一门课程，需要学号和课程号两个属性才能唯一标识一条记录，所以主键是(S#,C#)。
+(3)问题：定义学生的关系模式如下： S (S#,Sn,Sex,Age,D#,DA）（其属性分别为学号、姓名、性别、年龄、所属学院、院长） 该关系的范式最高是______。
+主键是表中的一个或多个字段，它的值用于唯一地标识表中的某一条记录。学号可以唯一标识一条记录，所以主键是S#，姓名、性别、年龄、所属学院直接依赖于S#。院长依赖于所属学院，所属学院依赖于主键，即院长传递依赖于主键，所以不满足第三范式，最高只能是第二范式。 所以本题选项 2NF 正确
+(4)问题：定义学生选修课程的关系模式如下： SC(S#,Sn,C#,Cn,G,Cr)（其属性分别为学号、姓名、课程号、课程名、成绩、学分） 则对主属性部分依赖的是______。
+知识点：关系模式。 主键是表中的一个或多个字段，它的值用于唯一地标识表中的某一条记录。一个学员不可能只选修一门课程，需要学号和课程号两个属性才能唯一标识一条记录，所以主键是（S#,C#）。姓名Sn只依赖于S#，不依赖于课程号C#，所以对主属性部分依赖。 所以本题选项 S#→Sn 正确
+11、知识点：数据流图。DFD 数据流图是描述数据处理过程的工具，是需求理解的逻辑模型的图形表示，它直接支持系统的功能建模。
+12、知识点：软件详细设计。 软件设计中，常用的过程设计工具如下：" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/post/python%E4%BA%8C%E7%BA%A7%E8%80%83%E8%AF%95%E7%AC%94%E8%AE%B0/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-02-24T15:32:02&#43;08:00" />
+<meta property="article:modified_time" content="2021-02-24T15:32:02&#43;08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Python二级考试笔记"/>
+<meta name="twitter:description" content="Python学习笔记 公共基础 1、线性表快速排序，最坏情况下需要比较的次数为n(n-1)/2
+2、而实现递归调用中的存储分配通常用：栈来表示
+3、软件工程三要素：方法、工具和过程
+4、数据处理的最小单位是：数据项
+5、不能作为结构化方法软件需求分析工具的是：数据流图；能作为工具的是：数据字典、系统结构图、判定表
+6、Unicode编码：A-Z 65-90，a-z 97-122
+7、知识点：软件测试的策略。 集成测试是测试和组装软件的过程。它是把模块在按照设计要求组装起来的同时进行测试，主要目的是发现与接口有关的错误。集成测试的依据是概要设计说明书。
+8、知识点：数据库的内部结构体系。 数据库系统内部采用三级模式和模式间的二级映射，是为了提高数据库的数据独立性，即物理独立性与逻辑独立性。
+9、知识点：数据库系统的内部结构体系。 数据库的三级模式结构包括：概念模式、内模式、外模式。概念模式，是数据库系统中全局数据逻辑结构的描述，是全体用户公共数据视图；外模式也称为子模式或用户模式。它是用户的数据视图，也就是用户所见到的数据模式，它由概念模式推导而出；内模式又称物理模式，它给出了数据库物理存储结构与物理存取方法。
+10、知识点：范式。 对于关系模式，若其中的每个属性都已不能再分为简单项，则它属于第一范式模式（1NF）。 如果某个关系模式 R 为第一范式，并且 R 中每一个非主属性完全函数依赖于 R 的某个候选键，则称其为第二范式模式（2NF）。 如果关系模式 R 是第二范式，并且每个非主属性都不传递依赖于R的候选键，则称 R 为第三范式模式（3NF）。 比 3NF 更高级的范式是 BCNF，它要求所有属性都不传递依赖于关系的任何候选键。 由题意可知，C#-&gt;Cn，C#-&gt;Cr，C#-&gt; prC1#，C#-&gt; prC2#，符合 BCNF 的定义。
+(1)问题：定义学生选修课程的关系模式如下： SC(S#,Sn,C#,Cn,G,Cr)（其属性分别为学号、姓名、课程号、课程名、成绩、学分） 则关系最高是（）
+每个属性都已不能再分为简单项，则它属于第一范式模式。 第二范式首先是第一范式，另外包含两部分内容，一是表必须有一个主键；二是没有包含在主键中的属性必须完全依赖于主键，而不能只依赖于主键的一部分。 第三范式首先是第二范式，另外非主键属性必须直接依赖于主键，不能存在传递依赖。 主键是表中的一个或多个字段，它的值用于唯一地标识表中的某一条记录。一个学员不可能只选修一门课程，需要学号和课程号两个属性才能唯一标识一条记录，所以主键是（S#,C#）,显然成绩完全依赖于（S#,C#）,而姓名只依赖于S#，不满足第二范式，最高范式只能是第一范式。
+(2)问题：定义学生选修课程的关系模式如下： SC(S#,Sn,C#,Cn,T#,G,Cr)（其属性分别为学号、姓名、课程号、课程名、授课老师号、成绩、学分） 并且一门课程可由多个教师教授，则该关系的键是______。
+本题考查知识点是关系模式。 主键是表中的一个或多个字段，它的值用于唯一地标识表中的某一条记录。一个学员不可能只选修一门课程，需要学号和课程号两个属性才能唯一标识一条记录，所以主键是(S#,C#)。
+(3)问题：定义学生的关系模式如下： S (S#,Sn,Sex,Age,D#,DA）（其属性分别为学号、姓名、性别、年龄、所属学院、院长） 该关系的范式最高是______。
+主键是表中的一个或多个字段，它的值用于唯一地标识表中的某一条记录。学号可以唯一标识一条记录，所以主键是S#，姓名、性别、年龄、所属学院直接依赖于S#。院长依赖于所属学院，所属学院依赖于主键，即院长传递依赖于主键，所以不满足第三范式，最高只能是第二范式。 所以本题选项 2NF 正确
+(4)问题：定义学生选修课程的关系模式如下： SC(S#,Sn,C#,Cn,G,Cr)（其属性分别为学号、姓名、课程号、课程名、成绩、学分） 则对主属性部分依赖的是______。
+知识点：关系模式。 主键是表中的一个或多个字段，它的值用于唯一地标识表中的某一条记录。一个学员不可能只选修一门课程，需要学号和课程号两个属性才能唯一标识一条记录，所以主键是（S#,C#）。姓名Sn只依赖于S#，不依赖于课程号C#，所以对主属性部分依赖。 所以本题选项 S#→Sn 正确
+11、知识点：数据流图。DFD 数据流图是描述数据处理过程的工具，是需求理解的逻辑模型的图形表示，它直接支持系统的功能建模。
+12、知识点：软件详细设计。 软件设计中，常用的过程设计工具如下："/>
+
+	<link rel="stylesheet" type="text/css" media="screen" href="/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="/css/all.css" />
+	<link rel="stylesheet" href="/css/katex.min.css" crossorigin="anonymous">
+	<script defer src="/js/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+	<script defer src="/js/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script><title>Python二级考试笔记 | 宇宙中一粒尘埃</title>
+
+
+</head>
+<body><header>
+	
+	<div id="avatar">
+		<a href="http://example.org/">
+		  <img src="/img/star.jpg" alt="宇宙中一粒尘埃">
+		</a>
+	</div>
+	
+	<div id="titletext"><h2 id="title"><a href="http://example.org/">宇宙中一粒尘埃</a></h2></div>
+	<div id="title-description"><p id="subtitle">在这里有工作、有生活、更有对未来的期许。</p><div id="social">
+			<nav>
+				<ul>
+					<li><a href="https://github.com/dataCobra/hugo-vitae"><i title="Github" class="icons fab fa-github"></i></a></li>
+					<li><a href="/index.xml"><i title="RSS" class="icons fas fa-rss"></i></a></li></ul>
+			</nav>
+		</div>
+	</div>
+	
+	<div id="mainmenu">
+		<nav>
+			<ul>
+				
+				<li><a href="/">主页</a></li>
+				
+				<li><a href="/post">历程</a></li>
+				
+				<li><a href="/categories">技术</a></li>
+				
+			</ul>
+		</nav>
+	</div>
+	
+</header>
+<main><div class="post">
+	
+	<div class="author">
+	
+	</div>
+	<div class="post-header">
+	
+		<div class="meta">
+			
+			<div class="date">
+				<span class="day">24</span>
+				<span class="rest">Feb 2021</span>
+			</div>
+			
+		</div>
+		
+		<div class="matter">
+			<h1 class="title">Python二级考试笔记</h1>
+		</div>
+	</div>
+	<div class="markdown">
+		<h1 id="python学习笔记">Python学习笔记</h1>
+<h2 id="公共基础">公共基础</h2>
+<p>1、线性表快速排序，最坏情况下需要比较的次数为n(n-1)/2</p>
+<p>2、而实现递归调用中的存储分配通常用：栈来表示</p>
+<p>3、软件工程三要素：方法、工具和过程</p>
+<p>4、数据处理的最小单位是：数据项</p>
+<p>5、不能作为结构化方法软件需求分析工具的是：数据流图；能作为工具的是：数据字典、系统结构图、判定表</p>
+<p>6、Unicode编码：A-Z 65-90，a-z 97-122</p>
+<p>7、知识点：软件测试的策略。
+集成测试是测试和组装软件的过程。它是把模块在按照设计要求组装起来的同时进行测试，主要目的是发现与接口有关的错误。集成测试的依据是概要设计说明书。</p>
+<p>8、知识点：数据库的内部结构体系。
+数据库系统内部采用三级模式和模式间的二级映射，是为了提高数据库的数据独立性，即物理独立性与逻辑独立性。</p>
+<p>9、知识点：数据库系统的内部结构体系。
+数据库的三级模式结构包括：概念模式、内模式、外模式。概念模式，是数据库系统中全局数据逻辑结构的描述，是全体用户公共数据视图；外模式也称为子模式或用户模式。它是用户的数据视图，也就是用户所见到的数据模式，它由概念模式推导而出；内模式又称物理模式，它给出了数据库物理存储结构与物理存取方法。</p>
+<p>10、知识点：范式。
+对于关系模式，若其中的每个属性都已不能再分为简单项，则它属于第一范式模式（1NF）。
+如果某个关系模式 R 为第一范式，并且 R 中每一个非主属性完全函数依赖于 R 的某个候选键，则称其为第二范式模式（2NF）。
+如果关系模式 R 是第二范式，并且每个非主属性都不传递依赖于R的候选键，则称 R 为第三范式模式（3NF）。
+比 3NF 更高级的范式是 BCNF，它要求所有属性都不传递依赖于关系的任何候选键。
+由题意可知，C#-&gt;Cn，C#-&gt;Cr，C#-&gt; prC1#，C#-&gt; prC2#，符合 BCNF 的定义。</p>
+<p>(1)问题：定义学生选修课程的关系模式如下： SC(S#,Sn,C#,Cn,G,Cr)（其属性分别为学号、姓名、课程号、课程名、成绩、学分） 则关系最高是（）</p>
+<p>每个属性都已不能再分为简单项，则它属于第一范式模式。
+第二范式首先是第一范式，另外包含两部分内容，一是表必须有一个主键；二是没有包含在主键中的属性必须完全依赖于主键，而不能只依赖于主键的一部分。
+第三范式首先是第二范式，另外非主键属性必须直接依赖于主键，不能存在传递依赖。
+主键是表中的一个或多个字段，它的值用于唯一地标识表中的某一条记录。一个学员不可能只选修一门课程，需要学号和课程号两个属性才能唯一标识一条记录，所以主键是（S#,C#）,显然成绩完全依赖于（S#,C#）,而姓名只依赖于S#，不满足第二范式，最高范式只能是第一范式。</p>
+<p>(2)问题：定义学生选修课程的关系模式如下： SC(S#,Sn,C#,Cn,T#,G,Cr)（其属性分别为学号、姓名、课程号、课程名、授课老师号、成绩、学分） 并且一门课程可由多个教师教授，则该关系的键是______。</p>
+<p>本题考查知识点是关系模式。
+主键是表中的一个或多个字段，它的值用于唯一地标识表中的某一条记录。一个学员不可能只选修一门课程，需要学号和课程号两个属性才能唯一标识一条记录，所以主键是(S#,C#)。</p>
+<p>(3)问题：定义学生的关系模式如下： S (S#,Sn,Sex,Age,D#,DA）（其属性分别为学号、姓名、性别、年龄、所属学院、院长） 该关系的范式最高是______。</p>
+<p>主键是表中的一个或多个字段，它的值用于唯一地标识表中的某一条记录。学号可以唯一标识一条记录，所以主键是S#，姓名、性别、年龄、所属学院直接依赖于S#。院长依赖于所属学院，所属学院依赖于主键，即院长传递依赖于主键，所以不满足第三范式，最高只能是第二范式。
+所以本题选项 2NF 正确</p>
+<p>(4)问题：定义学生选修课程的关系模式如下： SC(S#,Sn,C#,Cn,G,Cr)（其属性分别为学号、姓名、课程号、课程名、成绩、学分） 则对主属性部分依赖的是______。</p>
+<p>知识点：关系模式。
+主键是表中的一个或多个字段，它的值用于唯一地标识表中的某一条记录。一个学员不可能只选修一门课程，需要学号和课程号两个属性才能唯一标识一条记录，所以主键是（S#,C#）。姓名Sn只依赖于S#，不依赖于课程号C#，所以对主属性部分依赖。
+所以本题选项 S#→Sn 正确</p>
+<p>11、知识点：数据流图。DFD
+数据流图是描述数据处理过程的工具，是需求理解的逻辑模型的图形表示，它直接支持系统的功能建模。</p>
+<p>12、知识点：软件详细设计。
+软件设计中，常用的过程设计工具如下：</p>
+<p>①图形工具：程序流程图、N-S 图、PAD 图、HIPO 图；</p>
+<p>②表格工具：判定表；</p>
+<p>③语言工具：PDL（伪码）。</p>
+<p>13、使用结构图描述软件系统的层次和分块结构关系，它反映了整个系统的功能实现以及模块与模块之间的联系与通信，是未来程序中的控制层次体系。
+深度：表示控制的层数。
+宽度：表示整体控制跨度（最大模块数的层）。
+扇入：调用一个给定模块的模块个数。
+扇出：一个模块直接调用的其他模块数。
+原子模块：树中位于叶子结点的模块。</p>
+<p>14、程序调试的任务是（诊断和改正程序中的错误）。 如那件测试是尽可能多地发现软件中的错误，软件测试贯穿整个软件生命周期，调试主要在开发阶段。</p>
+<p>15、知识点：关系模型。
+关系模型采用二维表来表示，简称表。在表框架中按行可以存放数据，每行数据称为元组，二维表中的元组均不相同。
+所以本题选项 不能全相同 正确</p>
+<p>16、软件单元测试的内容：1. 模块接口测试；2. 局部数据结构测试；3. 边界条件测试；4. 模块中所有独立路径测试；5. 比较判断与控制流常常紧密相关。</p>
+<p>17、知识点：实体间的联系。
+两个实体间的联系可以归纳为3种类型：
+一对一联系：一对一的联系表现为主表中的每一条记录只与相关表中的一条记录相关联。
+一对多联系或多对一：一对多的联系表现为主表中的每一条记录与相关表中的多条记录相关联。
+多对多联系：多对多的联系表现为一个表中的多个记录在相关表中同样有多个记录与其匹配。
+本题中，每个学校有一名校长，且不同学校的校长可以是同一人，所以实体学校和实体校长间的联系为多对一的联系。
+所以本题选项  多对一 正确</p>
+<p>18、知识点：是数据流图</p>
+<p>使用排除法，选出错误项。</p>
+<p>数据流图中，数据流指暂时保存的数据，它可以是数据库文件或任何形式的数据组织，数据存储间不应该有数据流。所以选项 &ldquo;数据存储&quot;间有数据流 错误。</p>
+<p>&ldquo;加工&quot;应既有输入又有输出 正确</p>
+<p>数据流图中除了流向数据存储或从数据存储流出的数据不必命名外，每个数据流必须要有一个合适的名字，以反映该数据流的含义。所以选择 &ldquo;数据流&quot;应标识数据流名 正确
+相邻两层DFD之间具有父、子关系，子图代表了父图中某个加工的详细描述，父图表示了子图间的接口。子图个数不大于父图中的处理个数。所有子图的输入、输出数据流和父图中相应处理的输入、输出数据流必须一致。所以选项父图子图是指相邻上下两层的数据流图正确。</p>
+<p>知识点：数据流图。
+数据流图是描述数据处理过程的工具，是需求理解的逻辑模型的图形表示，它直接支持系统的功能建模。所以选项 支持软件系统功能建模 正确。</p>
+<p>19、物理数据模型又称物理模型，它是一种面向计算机物理表示的模型，此模型给出了数据模型在计算机上物理结构的表示。</p>
+<h2 id="python基础">Python基础</h2>
+<p>1、python中中文字符的编码范围： &lsquo;\u4e00&rsquo; 到 &lsquo;\u9fff&rsquo; 之间</p>
+<p>2、turtle 绘制图形：控制画笔颜色pencolor('')  、获取坐标points[]  、绘制边fd()  、画笔沿边返回原来的位置backward()；旋转角度用seth()函数</p>
+<p>3、字符串的切片，步长为负代表从后往前。</p>
+<p>4、string模块的printable是一个字符串包含所有数字、英文字符和一些特殊字符</p>
+<p>5、(1) 随机的浮点数，范围是在0.0~1.0之间：random.random()；ramdom()：生成一个 [0.0,1.0) 之间的随机小数。
+    (2) 函数随机生成一个[a,b]范围内的浮点数：random.uniform(a, b)；uniform(a,b)：生成一个 [a,b] 之间的随机小数。
+    (3) 随机生成一个范围[a, b]内的整数：random.randint(a, b)；
+    (4) 随机选取一个元素返回或随机生成字符：random.choice()；
+    (5) 随机打乱元素：random.shuffle()；
+    (6) 从序列a中截取指定长度n的片段:random.sample(a, n)；
+    (7) 随机选取a到b间的奇数1/偶数2：random.randrange(a, b, 2)。</p>
+<p>6、print(0.1+0.2==0.3) 输出False</p>
+<p>7、复数的表示</p>
+<p>8、Python使用的字符编码是： Unicode字符集</p>
+<p>9、将单词首字母大写：capitalize() 和 title()</p>
+<p>10、浮点数0.0和整数0相同性是具有相同的值</p>
+<p>11、abs() 返回数字的绝对值，复数的绝对值即他的模：例如 3+4j 的绝对值为 3^2+4^2=9+16=25</p>
+<p>12、文件读写中 seek(0, from) 其中第一位表示开始的读取的字节数位置，第二位表示开始移动字节的参考位置【如果from被设为0，这意味着将文件的开头作为移动字节的参考位置。如果设为1，则使用当前的位置作为参考位置。如果它被设为2，那么该文件的末尾将作为参考位置。】</p>
+<p>13、len(x)返回字符串x的长度，一个中文字符和一个西文字符的长度都记为1。&quot;&quot;为转义字符，&quot;\0&quot;表示一个空格，长度记为1，所以字符串长度为5。</p>
+<p>14、fo.writelines(lines)方法的含义是将一个元素为字符串的列表整体写入文件。ls =3 [&lsquo;book&rsquo;,&lsquo;23&rsquo;,&lsquo;201009&rsquo;,&lsquo;20&rsquo;]
+代码运行后的输出结果是book2320100920。</p>
+<p>15、len(ls)：列表ls的元素个数（长度）。
+range(start, stop[, step])表示计数从start开始，到stop结束，但不包括stop，步长默认为1。start默认从0开始，range(len(x))等价于range(0,3)，则i的取值范围为0、1、2。
+zip()：将对象中对应的元素打包成一个个元组，然后返回由这些元组组成的列表。
+由题面可知，每个键值对的值都是一样的。</p>
+<p>16、complex(r,i) 函数的作用是创建一个复数 r+i*1j，其中 i 可以省略。例如：complex(10.99) ==  (10.99+0j)</p>
+<p>17、x in s：如果 x 是 s 的子串，返回 True，否则返回 False。
+continue：用来结束当前当次循环，即跳出循环体中下面尚未执行的语句，但不跳出当前循环。
+str.replace(old,new)：返回字符串 str 的副本，所有 old 子串被替换为 new。
+根据题目，改变的是字符串副本，字符串 w 本身的内容没有改变，所以最后还是输出 fish520。</p>
+<p>18、all(x)：组合类型变量x中所有元素都为真时返回 True，否则返回 False；若 x 为空，返回 True。</p>
+<p>​        any(x)：组合类型变量 x 中任一元素都为真时返回True，否则返回 False；若 x 为空，返回 True。</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">y<span style="color:#333">=</span>[<span style="background-color:#fff0f0">&#39;&#39;</span>,<span style="background-color:#fff0f0">&#39;&#39;</span>]
+<span style="color:#080;font-weight:bold">print</span>(<span style="color:#007020">all</span>(y),<span style="color:#007020">any</span>(y))
+</code></pre></div><p>输出为：False、False</p>
+<p>19、</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">fo <span style="color:#333">=</span><span style="color:#007020">open</span>(<span style="background-color:#fff0f0">&#34;book.txt&#34;</span>,<span style="background-color:#fff0f0">&#34;w&#34;</span>)<span style="color:#f00;background-color:#faa">：</span>
+ls <span style="color:#333">=</span>[<span style="background-color:#fff0f0">&#39;book&#39;</span>,<span style="background-color:#fff0f0">&#39;23&#39;</span>,<span style="background-color:#fff0f0">&#39;201009&#39;</span>,<span style="background-color:#fff0f0">&#39;20&#39;</span>]
+fo<span style="color:#333">.</span>write(<span style="color:#007020">str</span>(ls))
+fo<span style="color:#333">.</span>close()
+</code></pre></div><p>str(x)：将 x 转换为等值的字符串类型。
+fo.write(s)：向文件写入一个字符串或字节流。
+代码执行后的输出结果为[&lsquo;book&rsquo;,&lsquo;23&rsquo;,&lsquo;201009&rsquo;,&lsquo;20&rsquo;]。</p>
+<p>20、str.center(width,fillchar)：返回长度为 width 的字符串，其中，str 位于新字符串中心位置，两侧新增字符采用 fillchar 填充。
+正确的语句是 print(str1.center(10,'*'))，运行后的结果为 <strong>python</strong>。</p>
+<p>21、第三方库</p>
+<p>人工智能：MXNet、PyTorch、Keras</p>
+<p><!-- raw HTML omitted --></p>
+<p>22、id()函数是Python内置函数之一，作用是获取对象的内存地址，返回对象的内存地址（是一个正整数）。</p>
+<p>23、打开并关闭文件的操作，需要文件的路径名，由于&rdquo;&quot;是字符串中的转义符，所以表示路径时，使用 &ldquo;\&rdquo; 或 &ldquo;/&rdquo; 代替 &ldquo;&quot;。</p>
+<p>24、split()方法是常用的字符串处理方法之一。
+Python文件操作方法：
+f.read(size)：从文件中读入整个文件内容。参数可选，如果给出，读入前size长度的字符串或字节流。
+f.readline(size)：从文件中读入一行内容。参数可选，如果给出，读入该行前size长度的字符串或字节流。
+f.readlines(hint)：从文件中读入所有行，以每行为元素形成一个列表。参数可选，如果给出，读入hint行。
+f.seek(offset)：改变当前文件操作指针的位置，offset的值：0为文件开头；1为当前位置；2为文件结尾。
+f.write(s)：向文件写入一个字符串或字节流。
+f.writelines(lines)：将一个元素为字符串的列表整体写入文件。</p>
+<p>25、顺序结构、分支结构和循环结构是Python语言中3种最基本的控制结构。异常处理以程序异常为判断条件，根据一段代码执行的正确性进行程序逻辑选择，是分支结构的一种扩展。</p>
+<p>26、img1 = img2 的作用是，img1 和 img2 都对 [1,2,3,4] 对象的引用，img2 会随着 img1 的改变而改变。
+ls.append(x) 的作用是在列表ls最后增加一个元素 x。[5,6] 是作为一个元素被添加进去的，所以最后结果为 [1,2,3,4,[5,6]]。</p>
+<p>27、列表切片：&lt;列表或列表变量&gt;[N:M:K]
+切片获取列表类型从N到M（不包含M）的以 K 为步长所对应的元素组成的列表。
+ls[-1::-1]中，N 为 -1，K 为 -1，表示获取列表从后往前的所有元素，即 46cd44ab，再执行 ls.reverse()，将列表中的元素逆序输出，得到 ab44cd46。</p>
+<h2 id="python-编程">Python 编程</h2>
+<p>1、某自然数除它本身之外的所有因子之和等于该数，则该数被称为完数【一个整数的所有因子(包括1，不包括本身)之和等于该数，则该数称为完数。】</p>
+<p>2、python进行二进制、八进制、十进制、十六进制转换</p>
+<p>3、判断是否为素数【质数（prime number)又称素数。指在一个大于1的自然数中，除了1和此整数自身外，不能被其他自然数整除的数。素数在数论中有着很重要的地位。比1大但不是素数的数称为合数。1和0既非素数也非合数。】</p>
+<p>def is_prime(n):
+for i in range(2,n):
+if n % i == 0:
+return False
+else:
+return True</p>
+<p>4、time库的gmtime(),strftime()</p>
+<p>下面对 strptime(str, tpl）函数做简单介绍：‪‬‪‬‪‬‪‬‪‬‮‬‫‬‫‬‪‬‪‬‪‬‪‬‪‬‮‬‪‬‪‬‪‬‪‬‪‬‪‬‪‬‮‬‫‬‮‬‪‬‪‬‪‬‪‬‪‬‮‬‫‬‪‬‪‬‪‬‪‬‪‬‪‬‮‬‫‬‫‬‪‬‪‬‪‬‪‬‪‬‮‬‫‬‫‬‪‬‪‬‪‬‪‬‪‬‮‬‪‬‫‬‪‬‪‬‪‬‪‬‪‬‮‬‭‬‫‬‪‬‪‬‪‬‪‬‪‬‮‬‪‬‭‬‪‬‪‬‪‬‪‬‪‬‮‬‪‬‮‬‪‬‪‬‪‬‪‬‪‬‮‬‫‬‭‬</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#333">&gt;&gt;&gt;</span> time<span style="color:#333">.</span>strptime(<span style="background-color:#fff0f0">&#34;2019-9-1&#34;</span>, <span style="background-color:#fff0f0">&#34;%Y-%m-</span><span style="background-color:#eee">%d</span><span style="background-color:#fff0f0">&#34;</span>)
+time<span style="color:#333">.</span>struct_time(tm_year<span style="color:#333">=</span><span style="color:#00d;font-weight:bold">2019</span>, tm_mon<span style="color:#333">=</span><span style="color:#00d;font-weight:bold">9</span>, tm_mday<span style="color:#333">=</span><span style="color:#00d;font-weight:bold">1</span>, tm_hour<span style="color:#333">=</span><span style="color:#00d;font-weight:bold">0</span>, tm_min<span style="color:#333">=</span><span style="color:#00d;font-weight:bold">0</span>, tm_sec<span style="color:#333">=</span><span style="color:#00d;font-weight:bold">0</span>, tm_wday<span style="color:#333">=</span><span style="color:#00d;font-weight:bold">6</span>, tm_yday<span style="color:#333">=</span><span style="color:#00d;font-weight:bold">244</span>, tm_isdst<span style="color:#333">=-</span><span style="color:#00d;font-weight:bold">1</span>)
+<span style="color:#333">&gt;&gt;&gt;</span> time<span style="color:#333">.</span>strptime(<span style="background-color:#fff0f0">&#34;2019-9-1&#34;</span>, <span style="background-color:#fff0f0">&#34;%Y-%m-</span><span style="background-color:#eee">%d</span><span style="background-color:#fff0f0">&#34;</span>)[<span style="color:#00d;font-weight:bold">0</span>]
+<span style="color:#00d;font-weight:bold">2019</span>
+<span style="color:#333">&gt;&gt;&gt;</span> time<span style="color:#333">.</span>strptime(<span style="background-color:#fff0f0">&#34;2019-9-1&#34;</span>, <span style="background-color:#fff0f0">&#34;%Y-%m-</span><span style="background-color:#eee">%d</span><span style="background-color:#fff0f0">&#34;</span>)[<span style="color:#00d;font-weight:bold">2</span>]
+<span style="color:#00d;font-weight:bold">1</span>
+</code></pre></div><p>time.struct_time类型数据访问的特点如下：‪‬‪‬‪‬‪‬‪‬‮‬‫‬‫‬‪‬‪‬‪‬‪‬‪‬‮‬‪‬‪‬‪‬‪‬‪‬‪‬‪‬‮‬‫‬‮‬‪‬‪‬‪‬‪‬‪‬‮‬‫‬‪‬‪‬‪‬‪‬‪‬‪‬‮‬‫‬‫‬‪‬‪‬‪‬‪‬‪‬‮‬‫‬‫‬‪‬‪‬‪‬‪‬‪‬‮‬‪‬‫‬‪‬‪‬‪‬‪‬‪‬‮‬‭‬‫‬‪‬‪‬‪‬‪‬‪‬‮‬‪‬‭‬‪‬‪‬‪‬‪‬‪‬‮‬‪‬‮‬‪‬‪‬‪‬‪‬‪‬‮‬‫‬‭‬</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">strptime(<span style="color:#007020">str</span>, tpl)[<span style="color:#00d;font-weight:bold">0</span>]: <span style="color:#00d;font-weight:bold">4</span><span style="color:#f00;background-color:#faa">位数年</span>
+strptime(<span style="color:#007020">str</span>, tpl)[<span style="color:#00d;font-weight:bold">1</span>]: <span style="color:#f00;background-color:#faa">月</span>( <span style="color:#00d;font-weight:bold">1</span> <span style="color:#f00;background-color:#faa">到</span> <span style="color:#00d;font-weight:bold">12</span>)
+strptime(<span style="color:#007020">str</span>, tpl)[<span style="color:#00d;font-weight:bold">2</span>]: <span style="color:#f00;background-color:#faa">日</span>( <span style="color:#00d;font-weight:bold">1</span><span style="color:#f00;background-color:#faa">到</span><span style="color:#00d;font-weight:bold">31</span>)
+strptime(<span style="color:#007020">str</span>, tpl)[<span style="color:#00d;font-weight:bold">3</span>]: <span style="color:#f00;background-color:#faa">小时</span> <span style="color:#00d;font-weight:bold">0</span><span style="color:#f00;background-color:#faa">到</span><span style="color:#00d;font-weight:bold">23</span>
+strptime(<span style="color:#007020">str</span>, tpl)[<span style="color:#00d;font-weight:bold">4</span>]: <span style="color:#f00;background-color:#faa">分钟</span> <span style="color:#00d;font-weight:bold">0</span><span style="color:#f00;background-color:#faa">到</span><span style="color:#00d;font-weight:bold">59</span>
+strptime(<span style="color:#007020">str</span>, tpl)[<span style="color:#00d;font-weight:bold">5</span>]: <span style="color:#f00;background-color:#faa">秒</span> ( <span style="color:#00d;font-weight:bold">0</span><span style="color:#f00;background-color:#faa">到</span><span style="color:#00d;font-weight:bold">61</span> , <span style="color:#00d;font-weight:bold">60</span><span style="color:#f00;background-color:#faa">或</span><span style="color:#00d;font-weight:bold">61</span> <span style="color:#f00;background-color:#faa">是闰秒</span>)
+strptime(<span style="color:#007020">str</span>, tpl)[<span style="color:#00d;font-weight:bold">6</span>]: <span style="color:#f00;background-color:#faa">一周的第几日</span> (<span style="color:#00d;font-weight:bold">0</span><span style="color:#f00;background-color:#faa">到</span><span style="color:#00d;font-weight:bold">6</span>,<span style="color:#00d;font-weight:bold">0</span><span style="color:#f00;background-color:#faa">是周一</span>)
+strptime(<span style="color:#007020">str</span>, tpl)[<span style="color:#00d;font-weight:bold">7</span>]: <span style="color:#f00;background-color:#faa">一年的第几日</span> (<span style="color:#00d;font-weight:bold">1</span><span style="color:#f00;background-color:#faa">到</span><span style="color:#00d;font-weight:bold">366</span>)
+strptime(<span style="color:#007020">str</span>, tpl)[<span style="color:#00d;font-weight:bold">8</span>]: <span style="color:#f00;background-color:#faa">夏令时</span>( <span style="color:#333">-</span><span style="color:#00d;font-weight:bold">1</span>, <span style="color:#00d;font-weight:bold">0</span>, <span style="color:#00d;font-weight:bold">1</span>, <span style="color:#333">-</span><span style="color:#00d;font-weight:bold">1</span><span style="color:#f00;background-color:#faa">是决定是否为夏令时的标志）</span>
+</code></pre></div><p>使用time.time()获取当前时间戳，返回值为数字形式。</p>
+<p>5、元组倒序：</p>
+<p>方法一：</p>
+<p>ls = list(d.items())                              #要理解这行代码
+ls.sort(key=lambda x:x[1], reverse = True)        #要理解这行代码</p>
+<p>方法二：</p>
+<p>d = dic.items()
+result = {}
+for dl in d:
+result[dl[1]] = dl[0]
+keys = sorted(result.keys(),reverse=True)</p>
+<p>6、随机123种子的随机数 random.seed(123)</p>
+<p>7、判断python字典中key是否存在，例如字典d：d.has_key(&lsquo;name&rsquo;), &lsquo;name&rsquo; in d.keys()</p>
+
+	</div>
+	
+	
+	
+	
+	
+		
+	
+		
+	
+		
+		
+	</div></div>
+
+  </main>
+<footer>
+	 © Copyright notice | <a href="https://github.com/dataCobra/hugo-vitae">Vitae</a> theme for <a href="https://gohugo.io">Hugo</a> 
+	
+	
+	
+</footer>
+
+
+</body>
+</html>
