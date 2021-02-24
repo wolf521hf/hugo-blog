@@ -1,13 +1,13 @@
-baseURL = "http://example.org/"
+baseURL = "https://github.com/wolf521hf/hugo-blog.git"
 languageCode = "en-us"
 defaultContentLanguage = "en"
-author = "Hugo Authors"
+author = "LiuPengFei"
 title = "宇宙中一粒尘埃"
 theme = "hugo-vitae"
 paginate = 5
 enableRobotsTXT = true
 
-copyright = "© Copyright notice | [Vitae](https://github.com/dataCobra/hugo-vitae) theme for [Hugo](https://gohugo.io)"
+copyright = "© Copyright notice | [宇宙中一粒尘埃]"
 
 pygmentsstyle = "colorful"
 pygmentscodefences = true
@@ -34,7 +34,7 @@ googleAnalytics = ""
 	pagetitle = "All about static site generation"
 
 	# Add a subtitle to your website
-	subtitle = "[Vitae](https://github.com/dataCobra/hugo-vitae) is a blog theme for Hugo that focuses on your content."
+	subtitle = "在这里有工作、有生活、更有对未来的期许。"
 
 	# Activate to show authors on pages if available
 	#listAuthor = true
@@ -95,16 +95,6 @@ name = "About"
 url = "/categories"
 weight = 3
 
-[[menu.main]]
-name = "Tags"
-url = "/tags"
-weight = 4
-
-[[menu.main]]
-name = "Categories"
-url = "/categories"
-weight = 5
-
 # Social Menu
 [[params.social]]
 name = "Github"
@@ -116,7 +106,3 @@ url = "https://github.com/dataCobra/hugo-vitae"
 #icon = "fas fa-envelope"
 #cmd = "mailto:example@example.com"
 
-[[params.social]]
-name = "RSS"
-icon = "fas fa-rss"
-url = "/index.xml"
