@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Posts on 宇宙中一粒尘埃</title>
+		<link>http://example.org/post/</link>
+		<description>Recent content in Posts on example.org</description>
+		<generator>Hugo -- gohugo.io</generator>
+		<language>en-us</language>
+		<copyright>© Copyright notice | Vitae theme for Hugo</copyright>
+		<lastBuildDate>Wed, 24 Feb 2021 13:27:25 +0800</lastBuildDate>
+		
+		<atom:link href="http://example.org/post/index.xml" rel="self" type="application/rss+xml" />
+		
+		<item>
+			<title>2021224 First</title>
+			<link>http://example.org/post/2021224-first/</link>
+			<pubDate>Wed, 24 Feb 2021 13:27:25 +0800</pubDate>
+			
+			<guid>http://example.org/post/2021224-first/</guid>
+			<description>
+			
+				我的第一篇博客之博客搭建 为什么会心血来潮搭建博客？ 自从工作以来从没像这次去认真搭建一个个人网站，每次都是半途而废。有主观的懈怠，也有客观的问题。之所以这次静下心来去搞事，是因为在与朋友的聊天后所感所思。总觉得要给自己留下点什么。人不能碌碌无为一生，甚至直到生命的终结在世界上没 …
+			
+			</description>
+		</item>
+		
+	</channel>
+</rss>
